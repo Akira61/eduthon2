@@ -23,6 +23,9 @@
     flex-direction: row-reverse;
     align-items: center;
     padding: 30px 10%;
+    position: sticky; /* Apply the sticky positioning */
+  top: 0; /* Stick the element to the top of the viewport */
+  z-index: 100; /* Ensure the navbar is above other content */
     background-color: #c8e8dc;
 }
 
@@ -74,6 +77,8 @@
     align-items: center;
     padding: 10px 70px;
     background-color: #c8e8dc;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .hero .hero-img {
@@ -121,16 +126,26 @@
 
 /* cards */
 
+.cards-container {
+    padding: 100px 20%;
+}
+
+.cards-container .cards-desc {
+    text-align: center;
+}
+
+.cards-container .cards-desc h1 {
+    font-size: 60px;
+}
 .cards {
     display: flex;
     align-items: center;
-    padding: 30px 20%;
     direction: rtl;
 }
 
 .cards .card {
     width: 300px;
-    height: 300px;
+    height: 250px;
     background-color: #c8e8dc;
     padding: 10px 10px;
     margin: 10px 30px;
@@ -143,4 +158,52 @@
 }
 .cards .card p {
     color: gray;
+}
+
+
+/* video */
+
+.explan-video {
+    background-color: #499c7e;
+    padding: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.explan-video .desc h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+.explan-video .video {
+    text-align: center;
+}
+
+.explan-video .video video {
+    /* border-style: dotted; */
+    border-color: #333;
+    border-radius: 10px;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #323b40;
+    padding: 20px;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+}
+
+footer p a {
+    color: #0096a1;
+    text-decoration: underline;
+}
+
+footer p a:hover {
+    color: #007f88;
 }
