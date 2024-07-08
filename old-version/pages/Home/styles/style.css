@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap");
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "El Messiri", sans-serif;
+  background: #f2fbfc;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all 0.25s ease-in-out;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+  border-radius: 20px;
+}
+
+#sidebar.expand {
+  width: 220px;
+  min-width: 220px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.sidebar-logo {
+  margin: auto 0;
+}
+
+.sidebar-logo a {
+  color: #111;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+.sidebar-nav {
+  padding: 2rem 0;
+  flex: 1 1 auto;
+}
+
+a.sidebar-link {
+  padding: 0.625rem 1.625rem;
+  color: #111;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  background-color: #0e2238;
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+  display: block;
+  max-height: 15em;
+  width: 100%;
+  opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 0.075rem 0.075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all 0.2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-out;
+}
+
+/* navbar */
+.navbar {
+  flex-direction: row-reverse;
+  background-color: #fff;
+  padding: 10px 30px;
+  margin: 20px 10px;
+  border-radius: 20px;
+}
+
+.navbar .navbar-welcome {
+  direction: rtl;
+}
+
+.navbar .navbar-details {
+  display: flex;
+  justify-content: space-between;
+  direction: rtl;
+  align-items: center;
+}
+.navbar .navbar-settings {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  align-items: center;
+}
+
+.navbar .navbar-search input {
+  width: 300px;
+}
+
+.navbar .navbar-account {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.navbar .navbar-account-img img {
+  border-radius: 50%;
+}
+.navbar .navbar-account-desc {
+  padding: 0 10px;
+}
+.navbar .navbar-account-desc h4,
+p {
+  font-size: medium;
+}
+
+/* row 2 */
+#row-two {
+  display: flex;
+  direction: rtl;
+}
+
+/* Subjects */
+
+.subjects {
+  width: 940px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.subjects-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+}
+
+.subject {
+  width: 250px;
+  height: 200px;
+  padding: 20px;
+  background-color: #f2fbfc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.subject-progress {
+  position: absolute;
+  width: 215px;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+.add-subject {
+  padding: 60px 0;
+}
+
+/* Todo */
+.todo {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.todo .todo-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-tasks {
+    padding-top: 20px;
+}
+
+.todo-task {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.todo-task-title label {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+
+.todo-task-info p {
+  color: #929292;
+  font-size: 9px;
+}
+
+.todo-task-title .checkbox-container {
+    display: block;
+    position: relative;
+    padding-right: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 33px;
+    width: 33px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #137561;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  right: 13px;
+  top: 6px;
+  width: 7px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* row three */
+.row-three {
+  display: flex;
+  direction: rtl;
+}
+
+
+/* chart */
+.chart {
+  width: 940px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.notifications {
+  width: 387px;
+  height: 447px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.notifications .notifi-desc {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.notifications .notifi-desc h3{
+  font-weight: 700;
+}
+
+.notifications .notifi-menu {
+  margin: 2rem 0;
+}
+.notifications .notifi-menu .notifi-item {
+  background-color: #f2fbfc;
+  padding: 20px 10px;
+  margin: 2rem 0;
+  border-radius: 20px;
+}
+
+.notifications .notifi-item h4 {
+  font-size: large;
+}
