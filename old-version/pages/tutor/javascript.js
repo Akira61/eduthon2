@@ -1,3 +1,10 @@
+const hamBurger = document.querySelector(".toggle-btn");
+
+hamBurger.addEventListener("click", function () {
+  document.querySelector("#sidebar").classList.toggle("expand");
+});
+
+
 const messageForm = document.querySelector(".send-container");
 const messageInput = document.querySelector(".send-button");
 const messagesContainer = document.querySelector(".message-container");
