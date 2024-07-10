@@ -191,7 +191,7 @@ p {
 }
 
 .title {
-  margin: 20px;
+  margin: 40px 40px;
 }
 
 .title h1 {
@@ -204,6 +204,7 @@ p {
   display: flex;
   justify-content: space-around;
   direction: rtl;
+  margin: 40px 0px;
 }
 
 .cards .card {
@@ -246,7 +247,51 @@ p {
 }
 
 .card .desc .grad span {
-font-weight: 700;
-font-size: 40px;
-color: #137561;
+  font-weight: 700;
+  font-size: 40px;
+  color: #137561;
+}
+
+.notes-container {
+  width: 1329px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0px;
+  margin-left: 35px;
+  background-color: #fff;
+  direction: rtl;
+}
+
+.notes-container .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes {
+    align-items: center;
+}
+.notes .note {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note .note-title h3 {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.note span {
+  font-weight: 400;
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.notes .note .progress {
+  width: 215px;
+}
+
+.note button {
+    width: 130px;
+    border-radius: 20px;
+    background-color: #137561;
+    color: #fff;
 }

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar With Bootstrap</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button class="toggle-btn" type="button">
+            <i class="lni lni-grid-alt"></i>
+          </button>
+          <div class="sidebar-logo">
+            <a href="#">Edutopia</a>
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-user"></i>
+              <span>لوحة التحكم</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-agenda"></i>
+              <span>معلم</span>
+            </a>
+          </li>
+          <!-- <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-protection"></i>
+                        <span>Auth</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Login</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Register</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
+                        <i class="lni lni-layout"></i>
+                        <span>Multi Level</span>
+                    </a>
+                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
+                                Two Links
+                            </a>
+                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link">Link 1</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link">Link 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li> -->
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-popup"></i>
+              <span>الدردشات</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="lni lni-cog"></i>
+              <span>بنك المهارات</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-exit"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+      <!-- Sidebar ends -->
+
+      <div class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+          <div class="navbar-welcome">
+            <h1>مرحبًا سعيد، أتمنى لك يومًا رائعًا</h1>
+            <p>إنك تحقق تقدمًا ملحوظًا بناءً على تقييماتك!</p>
+          </div>
+          <div class="navbar-details">
+            <div class="navbar-search">
+              <form class="form-inline">
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="البحث"
+                  aria-label="Search"
+                />
+              </form>
+            </div>
+            <div class="navbar-settings">
+              <div class="navbar-bell">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.5357 4.05225C15.5357 3.7149 15.4017 3.39137 15.1632 3.15283C14.9246 2.91428 14.6011 2.78027 14.2638 2.78027C13.9264 2.78027 13.6029 2.91428 13.3643 3.15283C13.1258 3.39137 12.9918 3.7149 12.9918 4.05225V5.00623H12.2833C10.9198 5.00614 9.60749 5.52569 8.61356 6.45912C7.61964 7.39255 7.01881 8.66968 6.93339 10.0305L6.65228 14.5257C6.54509 16.2396 5.96961 17.8912 4.98854 19.3007C4.78583 19.592 4.66197 19.9309 4.62901 20.2843C4.59604 20.6377 4.6551 20.9936 4.80043 21.3174C4.94576 21.6413 5.17242 21.922 5.45836 22.1323C5.74431 22.3425 6.07981 22.4753 6.43223 22.5175L10.7658 23.0364V24.4038C10.7658 25.3315 11.1344 26.2212 11.7904 26.8772C12.4463 27.5332 13.3361 27.9017 14.2638 27.9017C15.1915 27.9017 16.0812 27.5332 16.7372 26.8772C17.3932 26.2212 17.7617 25.3315 17.7617 24.4038V23.0364L22.0953 22.5162C22.4475 22.4739 22.7828 22.3411 23.0686 22.1309C23.3543 21.9207 23.5809 21.6402 23.7262 21.3165C23.8715 20.9929 23.9306 20.6372 23.8978 20.284C23.865 19.9307 23.7414 19.592 23.539 19.3007C22.5579 17.8913 21.9824 16.2396 21.8752 14.5257L21.5941 10.0318C21.509 8.67073 20.9083 7.39328 19.9144 6.45958C18.9204 5.52589 17.6079 5.00616 16.2442 5.00623H15.5357V4.05225ZM12.2833 6.91418C11.4051 6.91408 10.5599 7.24868 9.9197 7.84986C9.27952 8.45104 8.89254 9.2736 8.83753 10.1501L8.55769 14.6452C8.42839 16.7071 7.7359 18.6939 6.55561 20.3895C6.54094 20.4105 6.53197 20.435 6.52958 20.4606C6.52718 20.4862 6.53144 20.5119 6.54194 20.5353C6.55244 20.5588 6.56882 20.5791 6.58949 20.5943C6.61016 20.6095 6.63442 20.6192 6.65991 20.6222L11.4133 21.1933C13.3072 21.4198 15.2203 21.4198 17.1143 21.1933L21.8676 20.6222C21.8931 20.6192 21.9174 20.6095 21.938 20.5943C21.9587 20.5791 21.9751 20.5588 21.9856 20.5353C21.9961 20.5119 22.0003 20.4862 21.9979 20.4606C21.9956 20.435 21.9866 20.4105 21.9719 20.3895C20.7921 18.6938 20.1 16.707 19.9711 14.6452L19.69 10.1501C19.635 9.2736 19.248 8.45104 18.6078 7.84986C17.9677 7.24868 17.1224 6.91408 16.2442 6.91418H12.2833ZM14.2638 25.9938C13.3861 25.9938 12.6738 25.2815 12.6738 24.4038V23.4498H15.8537V24.4038C15.8537 25.2815 15.1414 25.9938 14.2638 25.9938Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M23.9453 7.14844C23.9453 9.35758 22.1545 11.1484 19.9453 11.1484C17.7362 11.1484 15.9453 9.35758 15.9453 7.14844C15.9453 4.9393 17.7362 3.14844 19.9453 3.14844C22.1545 3.14844 23.9453 4.9393 23.9453 7.14844Z"
+                    fill="#137561"
+                  />
+                </svg>
+              </div>
+              <div class="navbar-account">
+                <div class="navbar-account-img">
+                  <img
+                    width="50px"
+                    src="https://neweralive.na/wp-content/uploads/2024/06/lloyd-sikeba.jpg"
+                    alt="profile"
+                  />
+                </div>
+                <div class="navbar-account-desc">
+                  <h4>سعيد مسفر</h4>
+                  <!-- <p>@Saeed_musfir</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Navbar end -->
+
+        <!-- text box -->
+        <div class="chat">
+          <div class="message-container"></div>
+		  <div class="textbox-container">
+
+			  <form class="send-container">
+				<div class="text-box">
+				  <div class="share">
+					<label for="file-upload" class="custom-file-upload">
+					  <svg
+						width="42"
+						height="28"
+						viewBox="0 0 42 28"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					  >
+						<path
+						  d="M31.6438 27.6111L31.575 21.3935L25.3574 21.4623L25.3116 17.3172L31.5292 17.2485L31.4604 11.0309L35.6054 10.985L35.6742 17.2026L41.8918 17.1338L41.9376 21.2788L35.7201 21.3476L35.7889 27.5652L31.6438 27.6111ZM19.1399 21.5311L10.8498 21.6228C7.98276 21.6545 5.52807 20.6709 3.48568 18.6718C1.44329 16.6728 0.405557 14.2404 0.372469 11.3748C0.339381 8.50924 1.32305 6.05455 3.32347 4.01077C5.32389 1.96698 7.75621 0.929243 10.6204 0.897552L18.9105 0.805828L18.9564 4.95088L10.6663 5.0426C8.9392 5.06171 7.47785 5.68244 6.28225 6.90479C5.08666 8.12714 4.49841 9.60187 4.51752 11.329C4.53663 13.0561 5.15736 14.5174 6.37971 15.713C7.60206 16.9086 9.07679 17.4969 10.8039 17.4778L19.094 17.386L19.1399 21.5311ZM12.8306 13.3098L12.7847 9.16473L29.3649 8.98128L29.4108 13.1263L12.8306 13.3098ZM41.823 10.9162L37.6779 10.9621C37.6588 9.23497 37.0381 7.77362 35.8157 6.57803C34.5934 5.38243 33.1187 4.79419 31.3916 4.81329L23.1015 4.90502L23.0556 0.759966L31.3457 0.668242C34.2127 0.636521 36.6681 1.62018 38.7119 3.61922C40.7556 5.61826 41.7927 8.05059 41.823 10.9162Z"
+						  fill="#137561"
+						/>
+					  </svg>
+					</label>
+					<input id="file-upload" type="file" />
+				  </div>
+				  <input
+					type="text"
+					name=""
+					id=""
+					class="send-button"
+					placeholder="اكتب رسالة"
+				  />
+				  <button type="submit" class="send-button">
+					<svg
+					  width="37"
+					  height="36"
+					  viewBox="0 0 37 36"
+					  fill="none"
+					  xmlns="http://www.w3.org/2000/svg"
+					>
+					  <g clip-path="url(#clip0_261_5295)">
+						<path
+						  d="M34.7113 19.7213L27.32 24.5476V32.6138C27.365 34.0651 25.4525 34.8751 24.44 33.8063L19.985 29.3513L13.7525 33.4238C13.4713 33.6039 13.1562 33.7051 12.83 33.7051C12.1325 33.7051 11.48 33.2551 11.2437 32.6026L0.680046 3.96007C0.601284 3.73512 0.567501 3.49885 0.601284 3.27383C0.646263 2.10385 1.94004 1.37258 2.99754 1.85632L34.5088 16.7851C35.6788 17.2914 35.8025 19.0576 34.7113 19.7213ZM10.355 9.07886L23.9788 22.7026L30.3463 18.5401L10.355 9.07886Z"
+						  fill="white"
+						/>
+					  </g>
+					  <defs>
+						<clipPath id="clip0_261_5295">
+						  <rect
+							width="36"
+							height="36"
+							fill="white"
+							transform="matrix(-1 0 0 1 36.0276 0)"
+						  />
+						</clipPath>
+					  </defs>
+					</svg>
+				  </button>
+				</div>
+			  </form>
+		  </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="javascript.js">
+		
+	</script>
+  </body>
+</html>
